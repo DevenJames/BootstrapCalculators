@@ -1,0 +1,203 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculators</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="fluid-container">
+        <p id="Heading">Please Select a Calculator For Your Needs.</p>
+
+        <hr>
+        
+        <div class="row1">
+            <div class="col-sm-4" style="background-color:lavender;" data-toggle="modal" data-target="#standardModal"><p>Standard Calculator</p></div>
+            <div class="col-sm-4 tempature" style="background-color:aquamarine;" data-toggle="modal" data-target="#tempatureModal"><p>Tempature</p></div>
+            <div class="col-sm-4 rbg" style="background-color:burlywood;"><p>RGB: Coming Soon</p></div>
+        </div>
+
+        <div class="row2">
+            <div class="col-sm-4 weight" style="background-color:cadetblue" data-toggle="modal" data-target="#weightModal"><p>Weight</p></div>
+            <div class="col-sm-4 speed" style="background-color:chocolate;" data-toggle="modal" data-target="#speedModal"><p>Speed</p></div>
+            <div class="col-sm-4 distance" style="background-color:cornflowerblue;" data-toggle="modal" data-target="#distanceModal"><p>Distance</p></div>
+        </div>
+
+        <div class="row3">
+            <div class="col-sm-4 Binary" style="background-color:crimson;"><p>Binary: Coming Soon</p></div>
+            <div class="col-sm-4 Hexidecimal" style="background-color:darkkhaki;"><p>Hexadecimal: Coming Soon</p></div>
+            <div class="col-sm-4 Ascii" style="background-color:darkmagenta;"><p>Ascii: Coming Soon</p></div>
+        </div>
+    </div>
+
+<div class="modal fade" id="standardModal" role="dialog">
+    <div class="modal-dialog">
+            
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Standard Calculator</h4>
+      </div>
+      <div class="modal-body">
+      <input id="standardCalcOutput" type="text" value=""/>
+      <table>
+        <tr>
+          <td><button id="1">1</button></td>
+          <td><button id="2">2</button></td>
+          <td><button id="3">3</button></td>
+          <td><button id="+">+</button></td>
+          <td><button id="-">-</button></td>
+           <td><button id="backspace">Backspace</button></td>
+        </tr>
+        <tr>
+          <td><button id="4">4</button></td>
+          <td><button id="5">5</button></td>
+          <td><button id="6">6</button></td>
+          <td><button id="*">*</button></td>
+          <td><button id="/">/</button></td>
+          <td><button id="clear">Clear</button></td>
+        </tr>
+        <tr>
+          <td><button id="7">7</button></td>
+          <td><button id="8">8</button></td>
+          <td><button id="9">9</button></td>
+          <td><button id="0">0</button></td>
+          <td><button id="=">=</button></td>
+        </tr>
+      </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>      
+    </div>
+</div>
+
+<div class="modal fade" id="tempatureModal" role="dialog">
+  <div class="modal-dialog">
+          
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Tempature Conversion Calculator</h4>
+    </div>
+    <div class="modal-body">
+      <input id="fahrenheit" type="text" value=""/>
+      <button id="convertFahrenToCel" class="btn">Convert</button>
+      <input id="celsius" type="text" value=""/>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>      
+  </div>
+</div>
+
+<div class="modal fade" id="weightModal" role="dialog">
+  <div class="modal-dialog">
+          
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Weight Conversion Calculator</h4>
+    </div>
+    <div class="modal-body">
+
+      <input id="weightInput" type="text"/>
+
+      <div class="dropdown" style="display: inline;">
+        <button id="selectedUnit" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Unit<span class="caret"></span></button>
+        <ul id="weight" class="dropdown-menu">
+          <li id="selectLb" style="cursor: pointer">Lb</li>
+          <li id="selectKg" style="cursor: pointer">Kg</li>
+          <li id="selectGrams" style="cursor: pointer">Grams</li>
+          <li id="selectMg" style="cursor: pointer">Mg</li>
+        </ul>
+    </div>
+      <button id="convertWeightInput" class="btn">Convert</button>
+      <br/><br/>
+      <div id=weightOutput></div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>      
+  </div>
+</div>
+
+<div class="modal fade" id="speedModal" role="dialog">
+  <div class="modal-dialog">
+          
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Speed Conversion Calculator</h4>
+    </div>
+    <div class="modal-body">
+
+      <input id="speedInput" type="text"/>
+
+      <div class="dropdown" style="display: inline;">
+        <button id="selectedSpeedUnit" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Unit<span class="caret"></span></button>
+        <ul id="speed" class="dropdown-menu">
+          <li id="selectMph" style="cursor: pointer">Mph</li>
+          <li id="selectKmh" style="cursor: pointer">Km</li>
+          <li id="selectMs" style="cursor: pointer">M/S</li>
+        </ul>
+    </div>
+      <button id="convertSpeedInput" class="btn">Convert</button>
+      <br/><br/>
+      <div id=speedOutput></div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>      
+  </div>
+</div>
+
+<div class="modal fade" id="distanceModal" role="dialog">
+  <div class="modal-dialog">
+          
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Distance Conversion Calculator</h4>
+    </div>
+    <div class="modal-body">
+
+      <input id="distanceInput" type="text"/>
+
+      <div class="dropdown" style="display: inline;">
+        <button id="selectedDistanceUnit" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Unit<span class="caret"></span></button>
+        <ul id="ditance" class="dropdown-menu">
+          <li id="selectMiles" style="cursor: pointer">Miles</li>
+          <li id="selectFeet" style="cursor: pointer">Feet</li>
+          <li id="selectKm" style="cursor: pointer">Kilometers</li>
+          <li id="selectMeters" style="cursor: pointer">Meters</li>
+        </ul>
+    </div>
+      <button id="convertDistanceInput" class="btn">Convert</button>
+      <br/><br/>
+      <div id=distanceOutput></div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>      
+  </div>
+</div>
+
+<script src="standard.js"></script>
+<script src="tempature.js"></script>
+<script src="weight.js"></script>
+<script src="speed.js"></script>
+<script src="distance.js"></script>
+</body>
+</html>

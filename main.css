@@ -1,0 +1,34 @@
+#heading{
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 1%;
+}
+
+.row1{
+    display: flex;
+    text-align: center; 
+    height:29.7vh;
+    line-height:25vh;
+    font-size: 2em;
+    cursor: pointer;
+    margin-top:0;
+}
+
+.row2{
+    display: flex;
+    text-align: center; 
+    height:29.7vh;
+    line-height:25vh;
+    font-size: 2em;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.row3{
+    display: flex;
+    text-align: center; 
+    height:29.7vh;
+    line-height:25vh;
+    font-size: 2em;
+    cursor: pointer;
+}
